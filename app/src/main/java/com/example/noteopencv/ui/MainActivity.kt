@@ -1,7 +1,8 @@
-package com.example.noteopencv
+package com.example.noteopencv.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.example.noteopencv.R
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
