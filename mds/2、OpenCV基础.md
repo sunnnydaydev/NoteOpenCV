@@ -79,5 +79,6 @@ class SimpleDemoActivity : AppCompatActivity() {
     }
 }
 ```
+![](https://gitee.com/sunnnydaydev/my-pictures/raw/master/github/opencv/lean.png)
 
 

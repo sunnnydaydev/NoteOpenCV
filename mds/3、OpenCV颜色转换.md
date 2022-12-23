@@ -29,3 +29,5 @@ class ColorChangeActivity : AppCompatActivity() {
 }
 ```
 
+![](https://gitee.com/sunnnydaydev/my-pictures/raw/master/github/opencv/girl.png)
+
