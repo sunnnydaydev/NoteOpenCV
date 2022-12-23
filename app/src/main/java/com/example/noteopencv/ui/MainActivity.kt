@@ -13,5 +13,8 @@ class MainActivity : AppCompatActivity() {
         btnSimpleDemo.setOnClickListener {
             startActivity(Intent(this,SimpleDemoActivity::class.java))
         }
+        btnColorChange.setOnClickListener {
+            startActivity(Intent(this,ColorChangeActivity::class.java))
+        }
     }
 }

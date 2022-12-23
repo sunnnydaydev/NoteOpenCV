@@ -1,4 +1,4 @@
-# OpenCV 简单案例
+# OpenCV 基础
 
 ###### 1、OpenCV Java Api 中常用类
 
