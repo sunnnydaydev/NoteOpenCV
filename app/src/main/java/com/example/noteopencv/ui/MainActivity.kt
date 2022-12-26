@@ -1,6 +1,7 @@
 package com.example.noteopencv.ui
 
 import android.content.Intent
+import android.media.FaceDetector
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.noteopencv.R
@@ -15,6 +16,10 @@ class MainActivity : AppCompatActivity() {
         }
         btnColorChange.setOnClickListener {
             startActivity(Intent(this,ColorChangeActivity::class.java))
+        }
+
+        faceDetection.setOnClickListener {
+            startActivity(Intent(this,FaceDetectionActivity::class.java))
         }
     }
 }

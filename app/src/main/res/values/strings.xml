@@ -5,4 +5,5 @@
     <string name="color_change">颜色转换</string>
     <string name="change_color">灰度</string>
     <string name="two_value">二值</string>
+    <string name="face_detection">人脸检测</string>
 </resources>
