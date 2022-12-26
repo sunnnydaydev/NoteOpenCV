@@ -41,7 +41,7 @@ class ColorChangeActivity : AppCompatActivity() {
 
 阈值的确定有两种方法：
 
-（1）手动指定
+（1）手动阈值法
 
 ```kotlin
 /**
@@ -66,6 +66,33 @@ Imgproc.threshold(desMat, desMat, 125.0, 255.0, Imgproc.THRESH_BINARY)
 Utils.matToBitmap(desMat, bitmap)
 imgGirl.setImageBitmap(bitmap)
 ```
+
 ![](https://gitee.com/sunnnydaydev/my-pictures/raw/master/github/opencv/img5.png)
+
+（2）自动阈值法
+
+openCV可以使用算法来自动计算阈值，其支持均值算法、高斯均值算法。他不是像手动指定那样计算全局的阈值，二值根据图像的不同区域亮度分布计算其局部 阈值，能够自适应不同区域的阈值。
+
+```kotlin
+/**
+ * src：
+ * dst：
+ * maxValue：最大值，高于阈值时的像素最大值。同自动阈值maxval字段
+ * adaptiveMethod：自适应算法（两种可选）
+ * thresholdType：同自动阈值type字段
+ * blockSize：区域局部大小（一般用奇数）
+ * C：使用均值算法最后均值会减去一个常数，c就是常数的大小
+ */
+public static void adaptiveThreshold (
+Mat src,
+Mat dst,
+double maxValue,
+int adaptiveMethod,
+int thresholdType,
+int blockSize,
+double C)
+```
+
+![](https://gitee.com/sunnnydaydev/my-pictures/raw/master/github/opencv/img6.png)
 
               

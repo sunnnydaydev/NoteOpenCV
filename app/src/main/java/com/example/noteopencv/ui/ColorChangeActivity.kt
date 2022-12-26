@@ -32,7 +32,7 @@ class ColorChangeActivity : AppCompatActivity() {
             //1、先灰度
             Imgproc.cvtColor(srcMat, desMat, Imgproc.COLOR_BGR2GRAY)
             //2、再二值
-            Imgproc.threshold(desMat, desMat, 125.0, 255.0, Imgproc.THRESH_BINARY)
+            Imgproc.adaptiveThreshold(desMat, desMat,  255.0,Imgproc.ADAPTIVE_THRESH_MEAN_C, Imgproc.THRESH_BINARY,13,5.0)
             Utils.matToBitmap(desMat, bitmap)
             imgGirl.setImageBitmap(bitmap)
         }
