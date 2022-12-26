@@ -84,13 +84,34 @@ openCV可以使用算法来自动计算阈值，其支持均值算法、高斯�
  * C：使用均值算法最后均值会减去一个常数，c就是常数的大小
  */
 public static void adaptiveThreshold (
-Mat src,
+        Mat src,
 Mat dst,
 double maxValue,
 int adaptiveMethod,
 int thresholdType,
 int blockSize,
 double C)
+```
+
+```kotlin
+            val bitmap = BitmapFactory.decodeResource(resources, R.drawable.girl)
+val srcMat = Mat()
+val desMat = Mat()
+Utils.bitmapToMat(bitmap, srcMat)
+//1、先灰度
+Imgproc.cvtColor(srcMat, desMat, Imgproc.COLOR_BGR2GRAY)
+//2、再二值
+Imgproc.adaptiveThreshold(
+    desMat,
+    desMat,
+    255.0,
+    Imgproc.ADAPTIVE_THRESH_MEAN_C,
+    Imgproc.THRESH_BINARY,
+    13,
+    5.0
+)
+Utils.matToBitmap(desMat, bitmap)
+imgGirl.setImageBitmap(bitmap)
 ```
 
 ![](https://gitee.com/sunnnydaydev/my-pictures/raw/master/github/opencv/img6.png)
