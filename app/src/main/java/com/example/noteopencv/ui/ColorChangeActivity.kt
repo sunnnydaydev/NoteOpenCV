@@ -15,14 +15,26 @@ class ColorChangeActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_color_change)
         changeColor.setOnClickListener {
-            val bitmap = BitmapFactory.decodeResource(resources,R.drawable.girl)
+            val bitmap = BitmapFactory.decodeResource(resources, R.drawable.girl)
             val srcMat = Mat()
             val desMat = Mat()
-            Utils.bitmapToMat(bitmap,srcMat)
-            Imgproc.cvtColor(srcMat,desMat,Imgproc.COLOR_BGR2GRAY)
-            Utils.matToBitmap(desMat,bitmap)
+            Utils.bitmapToMat(bitmap, srcMat)
+            Imgproc.cvtColor(srcMat, desMat, Imgproc.COLOR_BGR2GRAY)
+            Utils.matToBitmap(desMat, bitmap)
             imgGirl.setImageBitmap(bitmap)
         }
 
+        twoValue.setOnClickListener {
+            val bitmap = BitmapFactory.decodeResource(resources, R.drawable.girl)
+            val srcMat = Mat()
+            val desMat = Mat()
+            Utils.bitmapToMat(bitmap, srcMat)
+            //1、先灰度
+            Imgproc.cvtColor(srcMat, desMat, Imgproc.COLOR_BGR2GRAY)
+            //2、再二值
+            Imgproc.threshold(desMat, desMat, 125.0, 255.0, Imgproc.THRESH_BINARY)
+            Utils.matToBitmap(desMat, bitmap)
+            imgGirl.setImageBitmap(bitmap)
+        }
     }
 }

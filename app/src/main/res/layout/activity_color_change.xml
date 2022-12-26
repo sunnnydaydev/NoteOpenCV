@@ -25,5 +25,15 @@
         android:layout_height="wrap_content"
         android:text="@string/change_color"/>
 
+    <Button
+        android:textAllCaps="false"
+        app:layout_constraintTop_toBottomOf="@id/changeColor"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:id="@+id/twoValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/two_value"/>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

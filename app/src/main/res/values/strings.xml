@@ -3,5 +3,6 @@
     <string name="simple_demo">简单案例</string>
     <string name="bitwise_not">bitwiseNot</string>
     <string name="color_change">颜色转换</string>
-    <string name="change_color">changeColor</string>
+    <string name="change_color">灰度</string>
+    <string name="two_value">二值</string>
 </resources>
