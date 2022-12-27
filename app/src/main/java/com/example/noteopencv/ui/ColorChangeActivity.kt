@@ -22,6 +22,9 @@ class ColorChangeActivity : AppCompatActivity() {
             Imgproc.cvtColor(srcMat, desMat, Imgproc.COLOR_BGR2GRAY)
             Utils.matToBitmap(desMat, bitmap)
             imgGirl.setImageBitmap(bitmap)
+
+            srcMat.release()
+            desMat.release()
         }
 
         twoValue.setOnClickListener {
@@ -35,6 +38,9 @@ class ColorChangeActivity : AppCompatActivity() {
             Imgproc.adaptiveThreshold(desMat, desMat,  255.0,Imgproc.ADAPTIVE_THRESH_MEAN_C, Imgproc.THRESH_BINARY,13,5.0)
             Utils.matToBitmap(desMat, bitmap)
             imgGirl.setImageBitmap(bitmap)
+
+            srcMat.release()
+            desMat.release()
         }
     }
 }
